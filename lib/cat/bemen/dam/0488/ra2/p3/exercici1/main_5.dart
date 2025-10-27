@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MainApp());
+void main() => runApp(const MainApp());
 
 class Message {
   final String author;
@@ -15,7 +15,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔹 Llista de noms (autors aleatoris)
     final names = [
       "Ellison Curry",
       "Briggs Willis",
@@ -41,7 +40,6 @@ class MainApp extends StatelessWidget {
       "Larry Shepherd",
     ];
 
-    // 🔹 Cos del missatge
     const body =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac vestibulum nunc.";
 
@@ -59,10 +57,9 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Exercici 1.5 - Message List"),
+          title: Text("Ejercicio 5 lista infinita"),
           centerTitle: true,
         ),
-        // 🔹 Llista amb scroll infinit
         body: ListView.builder(
           itemCount: messages.length,
           itemBuilder: (context, index) {
@@ -76,10 +73,8 @@ class MainApp extends StatelessWidget {
             );
           },
         ),
-        // 🔹 Botó flotant sense funcionalitat
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Sense funcionalitat
           },
           child: Icon(Icons.add),
         ),
