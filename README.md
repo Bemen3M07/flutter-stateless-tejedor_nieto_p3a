@@ -3,7 +3,7 @@
 
 A new Flutter project.
 
-// Exercici 1.1 — Hello World
+// Exercici 1.1 - Hello World
 
 En aquest exercici he fet una aplicació molt senzilla per mostrar el text “Hello world” a la pantalla.
 He fet servir la classe StatelessWidget perquè l’aplicació no necessita cap canvi d’estat, només mostrar un text fix.
@@ -23,7 +23,15 @@ Center: centra el contingut dins la pantalla.
 Text: mostra el text principal.
 
 
-// Exercici 1.3 — Resource
+// Ejercicio 1.2 - Welcome
+
+En el ejercicio 2 lo que he hecho primero es crear un Widget para poder poner el mensaje de bienvenida y los botones, creo una columna con el texto Welcome dani para darle un toque unico y con un estilo lo mas parecido al de la imagen, ahora, una sizedbox para poner el texto de start learning now con un estilo lo mas parecido al original. 
+Aqui tambien he creado un par de sizedbox para poner los botones de login y register.
+
+Para poder poner los botones he creado una clase llamada Botones con un widged donde he especificado los detalles del mismo, que sea con color backgroud negro.
+
+
+// Exercici 1.3 - Resource
 
 En aquest exercici he fet una aplicació que mostra una imatge desada dins dels recursos (assets) i un text explicatiu a sota.
 
@@ -44,6 +52,16 @@ SizedBox: per afegir espai entre elements.
 Text: per mostrar el missatge explicatiu.
 Center: per centrar tota la columna.
 AppBar: per afegir un títol superior.
+
+
+// Ejercicio 1.4 - Contact
+
+En este ejercicio he creado la clase Contact como se nos pide con el nombre completo, email y telefono, tambien el constructor en el que sea obligatorio el nombre, email y telefono.
+
+Ahora pasamos a la app donde creamos un Widget donde crearemos nuestro contacto de Marta 
+Ahora nos vamos a la clase de ContactScreen donde la usaremos para definir donde estará ubicado el texto y la imagen, en el centro en este caso, el tamaño de la caja del texto, la altura y diferentes decoraciones. 
+
+Por último la clase contactdetails podemos añadir los iconos del telefono y el correo.
 
 
 // Exercici 1.5 — Message List
@@ -68,3 +86,10 @@ ListTile: per mostrar cada missatge amb autor i cos.
 CircleAvatar: per mostrar la inicial de l’autor dins d’un cercle.
 FloatingActionButton: per afegir el botó flotant.
 Scaffold i AppBar: per estructurar l’aplicació.
+
+
+// Ejercicio 1.6 - App Bar
+
+En este ejercicio aprovechamos el ejercicio 5 la gran mayoria de contenido, lo unico que hemos añadido es el bottomNavigationbar que le hemos llamado bottomappbar para abreviar 
+le hemos hado shape: const CircularNotchedRectangle(), forma de rectangulo con un hueco circular en el centro para poder poner un boton en medio basicamente.
+hemos hecho un children donde hemos metido 4 iconos tipicos de telefono como el de la casita, buscador, mensaje y la tuerca de settings. 
