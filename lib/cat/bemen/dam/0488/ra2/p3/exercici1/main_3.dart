@@ -26,7 +26,7 @@ class MainApp extends StatelessWidget {
               const SizedBox(height: 20),
 
               const Text(
-                "Hola! soy dani",
+                "Hola! soy Dani Nieto",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
