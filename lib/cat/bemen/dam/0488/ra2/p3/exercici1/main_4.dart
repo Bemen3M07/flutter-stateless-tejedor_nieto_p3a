@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -109,7 +107,7 @@ class ContactScreen extends StatelessWidget {
                   Row(
                     children: [
                       const Icon(Icons.phone, color: Colors.black54, size: 20),
-                      const SizedBox(width: 8),
+                      const SizedBox(width: 9),
                       Text(
                         contact.phone,
                         style: const TextStyle(
