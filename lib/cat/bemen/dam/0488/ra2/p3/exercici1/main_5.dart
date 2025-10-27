@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔹 Llista de noms (autors aleatoris)
+
     final names = [
       "Ellison Curry",
       "Briggs Willis",
@@ -41,11 +41,9 @@ class MainApp extends StatelessWidget {
       "Larry Shepherd",
     ];
 
-    // 🔹 Cos del missatge
     const body =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac vestibulum nunc.";
 
-    // 🔹 Llista de 100 missatges generats aleatòriament
     final random = Random();
     final messages = List.generate(
       100,
@@ -62,7 +60,7 @@ class MainApp extends StatelessWidget {
           title: Text("Exercici 1.5 - Message List"),
           centerTitle: true,
         ),
-        // 🔹 Llista amb scroll infinit
+
         body: ListView.builder(
           itemCount: messages.length,
           itemBuilder: (context, index) {
@@ -76,10 +74,10 @@ class MainApp extends StatelessWidget {
             );
           },
         ),
-        // 🔹 Botó flotant sense funcionalitat
+
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Sense funcionalitat
+
           },
           child: Icon(Icons.add),
         ),
