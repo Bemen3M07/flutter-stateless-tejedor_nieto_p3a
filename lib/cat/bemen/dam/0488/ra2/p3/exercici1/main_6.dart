@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MainApp());
+void main() => runApp(const MainApp());
 
 class Message {
   final String author;
@@ -43,7 +43,6 @@ class MainApp extends StatelessWidget {
     const body =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac vestibulum nunc.";
 
-
     final random = Random();
     final messages = List.generate(
       100,
@@ -57,13 +56,13 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Ejercicio 5 lista infinita"),
+          title: const Text("Ejercicio 6"),
           centerTitle: true,
         ),
         body: ListView.builder(
           itemCount: messages.length,
           itemBuilder: (context, index) {
-            final msg = messages[index]; 
+            final msg = messages[index];
             return ListTile(
               leading: CircleAvatar(
                 child: Text(msg.author[0]),
@@ -74,9 +73,36 @@ class MainApp extends StatelessWidget {
           },
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-          },
-          child: Icon(Icons.add),
+          onPressed: () {},
+          child: const Icon(Icons.add),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: BottomAppBar(
+          shape: const CircularNotchedRectangle(),
+          notchMargin: 8,
+          color: Colors.blueGrey[100],
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.home),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.message),
+              ),
+              SizedBox(width: 40), // espacio para el FAB
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.search),
+              ),
+              IconButton(
+                onPressed: null,
+                icon: Icon(Icons.settings),
+              ),
+            ],
+          ),
         ),
       ),
     );

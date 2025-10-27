@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const MainApp());
 
 class Contact {
   final String fullName;
   final String email;
   final String phone;
-
-  const Contact({
-    required this.fullName,
-    required this.email,
-    required this.phone,
-  });
+  const Contact({required this.fullName, required this.email, required this.phone});
 }
 
 class MainApp extends StatelessWidget {
@@ -23,8 +16,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     const contact = Contact(
       fullName: 'Marta Casserres',
-      email: 'correodemarta@gmail.com',
-      phone: '9783674474',
+      email: 'marta@example.com',
+      phone: '934748474',
     );
 
     return const MaterialApp(
@@ -36,7 +29,6 @@ class MainApp extends StatelessWidget {
 
 class ContactScreen extends StatelessWidget {
   final Contact contact;
-
   const ContactScreen({super.key, required this.contact});
 
   @override
@@ -46,79 +38,38 @@ class ContactScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 40),
 
             ClipOval(
               child: Image.asset(
-                'assets/bymax.jpg',
+                'bymax.jpg', 
                 width: 120,
                 height: 120,
                 fit: BoxFit.cover,
               ),
             ),
-            const SizedBox(height: 20),
-            // Nombre
+            const SizedBox(height: 16),
             Text(
               contact.fullName,
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Colors.black87,
-              ),
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
-
             Container(
-              width: 300, 
+              width: 300,
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(12),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black12,
                     blurRadius: 6,
-                    offset: const Offset(0, 2),
+                    offset: Offset(0, 2),
                   ),
                 ],
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      const Icon(Icons.email, color: Colors.black54, size: 20),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          contact.email,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.black87,
-                          ),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    children: [
-                      const Icon(Icons.phone, color: Colors.black54, size: 20),
-                      const SizedBox(width: 9),
-                      Text(
-                        contact.phone,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          color: Colors.black87,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              child: const _ContactDetails(),
             ),
           ],
         ),
@@ -126,6 +77,35 @@ class ContactScreen extends StatelessWidget {
     );
   }
 }
+
+class _ContactDetails extends StatelessWidget {
+  const _ContactDetails({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            Icon(Icons.email, color: Colors.black54, size: 20),
+            SizedBox(width: 8),
+            Expanded(child: Text('correomartaa@gmail.com', style: TextStyle(fontSize: 16))),
+          ],
+        ),
+        SizedBox(height: 10),
+        Row(
+          children: [
+            Icon(Icons.phone, color: Colors.black54, size: 20),
+            SizedBox(width: 8),
+            Text('934748474', style: TextStyle(fontSize: 16)),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
 
 
 

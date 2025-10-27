@@ -11,14 +11,11 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Exercici 1.3 - Resource"),
-          centerTitle: true,
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Imatge local del directori assets
               Image.asset(
                 'assets/bymax.jpg',
                 width: 200,
@@ -28,9 +25,8 @@ class MainApp extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Text explicatiu
               const Text(
-                "Aquesta imatge s'ha carregat des dels recursos (assets)",
+                "Hola! soy dani",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
