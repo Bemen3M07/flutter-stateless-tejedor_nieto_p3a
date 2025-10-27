@@ -28,7 +28,6 @@ class MainApp extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // Text explicatiu
               const Text(
                 "Aquesta imatge s'ha carregat des dels recursos (assets)",
                 textAlign: TextAlign.center,
