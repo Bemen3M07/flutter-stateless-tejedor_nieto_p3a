@@ -18,7 +18,6 @@ class MainApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Imatge local del directori assets
               Image.asset(
                 'assets/bymax.jpg',
                 width: 200,
