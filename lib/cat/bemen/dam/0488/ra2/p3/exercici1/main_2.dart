@@ -39,6 +39,8 @@ class Bienvenida extends StatelessWidget {
             SizedBox(height: 15),
             Botones(text: 'Register'),
           ],
+        // Aquí hemos creado el widget principal para mostrar el texto "Welcome" y
+// "Start learning now", junto con los botones de Login y Register.
         ),
       ),
     );
@@ -48,7 +50,7 @@ class Bienvenida extends StatelessWidget {
 class Botones extends StatelessWidget {
   final String text;
   const Botones({required this.text});
-
+// CLASE BOTONES PARA PODER CREAR LOS ELEVATED BUTTON PARA LA APLICACION
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -56,7 +58,6 @@ class Botones extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        shape: const StadiumBorder(),
         minimumSize: const Size(110, 40),
       ),
       child: Text(text),

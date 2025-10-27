@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MainApp());
+// En este ejercicio hemos creado la clase Contact con fullName, email y phone.
 
 class Contact {
   final String fullName;
@@ -50,6 +51,8 @@ class ContactScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
+            // Luego mostramos la información en el centro con una imagen circular y un
+
             Text(
               contact.fullName,
               style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -100,6 +103,7 @@ class _ContactDetails extends StatelessWidget {
             SizedBox(width: 8),
             Text('934748474', style: TextStyle(fontSize: 16)),
           ],
+          // recuadro gris que contiene los iconos del teléfono y el correo.
         ),
       ],
     );

@@ -18,3 +18,6 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+// Este ejercicio no hay que comentar mucho, es el main.dart que viene por defecto
+// y simplemente lo hemos movido a la ruta que nos han pedido.

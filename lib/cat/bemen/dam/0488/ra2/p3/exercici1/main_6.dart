@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MainApp());
+// En este ejercicio hemos aprovechado el código del ejercicio 5 y añadido
 
 class Message {
   final String author;
@@ -76,6 +77,8 @@ class MainApp extends StatelessWidget {
           onPressed: () {},
           child: const Icon(Icons.add),
         ),
+        // una barra de navegación inferior (BottomAppBar) con iconos típicos de una app.
+// No tiene funcionalidad, solo diseño.
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),

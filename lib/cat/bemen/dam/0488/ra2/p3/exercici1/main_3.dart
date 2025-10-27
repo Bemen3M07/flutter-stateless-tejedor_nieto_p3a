@@ -24,7 +24,8 @@ class MainApp extends StatelessWidget {
               ),
 
               const SizedBox(height: 20),
-
+// En este ejercicio hemos seguido el mismo formato que en el anterior.
+//hemos tenido que cambiar el pubspec.yaml para poder añadir las imagenes 
               const Text(
                 "Hola! soy dani",
                 textAlign: TextAlign.center,

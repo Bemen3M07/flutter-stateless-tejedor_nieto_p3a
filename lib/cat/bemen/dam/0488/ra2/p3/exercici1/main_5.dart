@@ -12,7 +12,7 @@ class Message {
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
-
+//  LISTA DE LOS NOMBRES
   @override
   Widget build(BuildContext context) {
     final names = [
@@ -39,11 +39,11 @@ class MainApp extends StatelessWidget {
       "Kori Walls",
       "Larry Shepherd",
     ];
-
+//MENSAJE DE TODOS LOS CONTACTOS O NOMBRES
     const body =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac vestibulum nunc.";
 
-    // 🔹 Llista de 100 missatges generats aleatòriament
+//ESTA ES LA LISTA DE 100 RANDOMS
     final random = Random();
     final messages = List.generate(
       100,
@@ -52,7 +52,7 @@ class MainApp extends StatelessWidget {
         body,
       ),
     );
-
+//Hacemos que sea infinita.
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
