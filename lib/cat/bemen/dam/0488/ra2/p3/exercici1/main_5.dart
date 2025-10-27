@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MainApp());
+void main() => runApp(const MainApp());
 
 class Message {
   final String author;
