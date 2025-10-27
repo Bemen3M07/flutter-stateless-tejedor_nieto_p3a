@@ -43,7 +43,7 @@ class MainApp extends StatelessWidget {
     const body =
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac vestibulum nunc.";
 
-//ESTA ES LA LISTA DE 100 RANDOMS
+    // 🔹 Llista de 100 missatges generats aleatòriament
     final random = Random();
     final messages = List.generate(
       100,
@@ -57,7 +57,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Ejercicio 5 lista infinita"),
+          title: Text("Ejercicio 5 lista infinita de Dani Nieto"),
           centerTitle: true,
         ),
         body: ListView.builder(

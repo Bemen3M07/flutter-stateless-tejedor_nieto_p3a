@@ -27,7 +27,7 @@ class MainApp extends StatelessWidget {
 // En este ejercicio hemos seguido el mismo formato que en el anterior.
 //hemos tenido que cambiar el pubspec.yaml para poder añadir las imagenes 
               const Text(
-                "Hola! soy dani",
+                "Hola! soy Dani Nieto",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
