@@ -15,7 +15,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔹 Llista de noms (autors aleatoris)
     final names = [
       "Ellison Curry",
       "Briggs Willis",
@@ -61,7 +60,6 @@ class MainApp extends StatelessWidget {
           title: Text("Ejercicio 5 lista infinita"),
           centerTitle: true,
         ),
-        // 🔹 Llista amb scroll infinit
         body: ListView.builder(
           itemCount: messages.length,
           itemBuilder: (context, index) {
@@ -75,10 +73,8 @@ class MainApp extends StatelessWidget {
             );
           },
         ),
-        // 🔹 Botó flotant sense funcionalitat
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Sense funcionalitat
           },
           child: Icon(Icons.add),
         ),

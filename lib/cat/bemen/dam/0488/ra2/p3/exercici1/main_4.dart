@@ -79,7 +79,7 @@ class ContactScreen extends StatelessWidget {
 }
 
 class _ContactDetails extends StatelessWidget {
-  const _ContactDetails({super.key});
+  const _ContactDetails();
 
   @override
   Widget build(BuildContext context) {

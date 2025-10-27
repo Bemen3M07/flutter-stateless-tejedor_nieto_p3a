@@ -92,7 +92,7 @@ class MainApp extends StatelessWidget {
                 onPressed: null,
                 icon: Icon(Icons.message),
               ),
-              SizedBox(width: 40), // espacio para el FAB
+              SizedBox(width: 40), 
               IconButton(
                 onPressed: null,
                 icon: Icon(Icons.search),
