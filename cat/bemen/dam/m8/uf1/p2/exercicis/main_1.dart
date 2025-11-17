@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,6 +19,8 @@ class MyApp extends StatelessWidget {
 class GoodApp extends StatelessWidget {
 
   final ValueNotifier<String> message = ValueNotifier<String>('Good ?!');
+
+  GoodApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,22 +41,22 @@ class GoodApp extends StatelessWidget {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () => message.value = 'Good morning',
-                  child: const Text('Morning'),
                   style: ElevatedButton.styleFrom(
-                    shape: StadiumBorder(),
+                    shape: const StadiumBorder(),
                     padding:
                         const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   ),
+                  child: const Text('Morning'),
                 ),
                 const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () => message.value = 'Good night',
-                  child: const Text('Night'),
                   style: ElevatedButton.styleFrom(
-                    shape: StadiumBorder(),
+                    shape: const StadiumBorder(),
                     padding:
                         const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   ),
+                  child: const Text('Night'),
                 ),
               ],
             );
