@@ -38,10 +38,6 @@ class _CounterAppState extends State<CounterApp> {
                   '$scoreA',
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
-                Text (
-                  '$reset',
-                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-                ),
                 Text(
                   '$scoreB',
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
@@ -64,7 +60,7 @@ class _CounterAppState extends State<CounterApp> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 14),
                   ),
-                  child: const Text('Puntuar'),
+                  child: const Text('Puntuar A'),
                 ),
                                 ElevatedButton(
                   onPressed: () {
@@ -78,7 +74,7 @@ class _CounterAppState extends State<CounterApp> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 14),
                   ),
-                  child: const Text('Resetear'),
+                  child: const Text('Resetear Puntuación'),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -91,7 +87,7 @@ class _CounterAppState extends State<CounterApp> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 14),
                   ),
-                  child: const Text('Puntuar'),
+                  child: const Text('Puntuar B'),
                 ),
               ],
             ),
