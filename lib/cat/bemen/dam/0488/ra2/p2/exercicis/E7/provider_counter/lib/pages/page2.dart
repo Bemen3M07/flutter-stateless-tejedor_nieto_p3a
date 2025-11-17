@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_counter/providers/counter_provider.dart';
 
-
-class Page2 extends StatefulWidget {
+class Page2 extends StatelessWidget {
   const Page2({super.key});
 
   @override
-  State <Page2> createState() =>  _Page2State();
-}
-
-class  _Page2State extends State <Page2> {
-  @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Pagina 2'),
+    final int counter = context.watch<CounterProvider>().counter;
 
+    return Center(
+      child: Text(
+        counter.toString(),
+        style: const TextStyle(fontSize: 64, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }

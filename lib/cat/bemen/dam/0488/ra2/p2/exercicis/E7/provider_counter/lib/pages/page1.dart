@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:provider_counter/providers/counter_provider.dart';
 
-
-class Page1 extends StatefulWidget {
+class Page1 extends StatelessWidget {
   const Page1({super.key});
 
   @override
-  State <Page1> createState() =>  _Page1State();
-}
-
-class  _Page1State extends State <Page1> {
-int _counter = 0;
-
-  @override
   Widget build(BuildContext context) {
+    final int counter = context.select<CounterProvider, int>((p) => p.counter);
+
     return Center(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Text(_counter.toString(), style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
-          ElevatedButton(onPressed: (){
-            setState(() {
-              _counter++;
-            });
-          }, child: const Text('Sumar')),
+          Text(counter.toString(), style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 12),
+          ElevatedButton(
+            onPressed: () => context.read<CounterProvider>().increment(),
+            child: const Text('Sumar'),
+          ),
         ],
-      )
-
+      ),
     );
   }
 }
