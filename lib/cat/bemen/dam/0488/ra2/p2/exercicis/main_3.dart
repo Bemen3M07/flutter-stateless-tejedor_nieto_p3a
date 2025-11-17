@@ -1,14 +1,16 @@
-import 'dart:math';
+import 'dart:math' show Random;
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SecretNumberApp(),
     );
@@ -16,6 +18,8 @@ class MyApp extends StatelessWidget {
 }
 
 class SecretNumberApp extends StatefulWidget {
+  const SecretNumberApp({super.key});
+
   @override
   _SecretNumberAppState createState() => _SecretNumberAppState();
 }
@@ -115,7 +119,7 @@ class _SecretNumberAppState extends State<SecretNumberApp> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => SecretNumberApp()),
+                      MaterialPageRoute(builder: (context) => const SecretNumberApp()),
                     );
                   },
                   style: ElevatedButton.styleFrom(

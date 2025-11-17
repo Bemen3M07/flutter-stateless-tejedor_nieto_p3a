@@ -49,7 +49,7 @@ class Bienvenida extends StatelessWidget {
 
 class Botones extends StatelessWidget {
   final String text;
-  const Botones({required this.text});
+  const Botones({super.key, required this.text});
 // CLASE BOTONES PARA PODER CREAR LOS ELEVATED BUTTON PARA LA APLICACION
   @override
   Widget build(BuildContext context) {

@@ -57,7 +57,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Ejercicio 5 lista infinita de Dani Nieto"),
+          title: const Text("Ejercicio 5 lista infinita de Dani Nieto"),
           centerTitle: true,
         ),
         body: ListView.builder(
@@ -76,7 +76,7 @@ class MainApp extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
           },
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
       ),
     );
