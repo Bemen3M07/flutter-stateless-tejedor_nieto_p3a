@@ -15,10 +15,10 @@ class Exercici8App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => NavigationProvider(),
+      create: (_) => NavigationProvider(), // Provider para controlar la navegación
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const Exercici8Home(),
+        home: const Exercici8Home(), // Pantalla principal con tabs
       ),
     );
   }
@@ -29,22 +29,22 @@ class Exercici8Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = context.watch<NavigationProvider>();
-    final selected = provider.selectedBottom;
+    final provider = context.watch<NavigationProvider>(); // Escucha cambios del provider
+    final selected = provider.selectedBottom; // Índice del tab seleccionado
 
-    final pages = [
-      const StatelessPage(),
-      const StatefulPage(),
+    final pages = [ // Array con las páginas de cada tab
+      const StatelessPage(), // Tab 0: Ejercicios P3
+      const StatefulPage(),  // Tab 1: Ejercicios P2
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: const Text("Exercici 2.8 — Navegació"),
       ),
-      body: pages[selected],
+      body: pages[selected], // Muestra la página según el tab seleccionado
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selected,
-        onTap: provider.setBottom,
+        currentIndex: selected, // Tab actual marcado
+        onTap: provider.setBottom, // Cambia de tab al hacer tap
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.layers),
