@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 
 typedef WidgetFactory = Widget Function();
 
-class StatelessPage extends StatefulWidget {
+class StatefulPage extends StatefulWidget {
   final List<WidgetFactory> widgets;
+  final List<String>? labels;
 
-  const StatelessPage({super.key, required this.widgets});
+  const StatefulPage({super.key, required this.widgets, this.labels});
 
   @override
-  State<StatelessPage> createState() => _StatelessPageState();
+  State<StatefulPage> createState() => _StatefulPageState();
 }
 
-class _StatelessPageState extends State<StatelessPage>
+class _StatefulPageState extends State<StatefulPage>
     with SingleTickerProviderStateMixin {
   late TabController controller;
 
@@ -32,13 +33,15 @@ class _StatelessPageState extends State<StatelessPage>
     return Column(
       children: [
         Material(
-          color: Colors.blue,
+          color: Colors.green,
           child: TabBar(
             controller: controller,
             isScrollable: true,
             tabs: List.generate(
               widget.widgets.length,
-              (i) => Tab(text: "P3 - ${i + 1}"),
+              (i) => Tab(text: widget.labels != null && i < widget.labels!.length
+                  ? widget.labels![i]
+                  : "P2 - ${i + 1}"),
             ),
           ),
         ),

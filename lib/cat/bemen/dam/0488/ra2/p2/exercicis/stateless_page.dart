@@ -4,8 +4,9 @@ typedef WidgetFactory = Widget Function();
 
 class StatelessPage extends StatefulWidget {
   final List<WidgetFactory> widgets;
+  final List<String>? labels;
 
-  const StatelessPage({super.key, required this.widgets});
+  const StatelessPage({super.key, required this.widgets, this.labels});
 
   @override
   State<StatelessPage> createState() => _StatelessPageState();
@@ -38,7 +39,9 @@ class _StatelessPageState extends State<StatelessPage>
             isScrollable: true,
             tabs: List.generate(
               widget.widgets.length,
-              (i) => Tab(text: "P3 - ${i + 1}"),
+              (i) => Tab(text: widget.labels != null && i < widget.labels!.length
+                  ? widget.labels![i]
+                  : "P3 - ${i + 1}"),
             ),
           ),
         ),

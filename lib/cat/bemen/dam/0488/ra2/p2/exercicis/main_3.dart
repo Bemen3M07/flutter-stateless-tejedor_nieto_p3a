@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class 
- extends StatefulWidget {
+class SecretNumberApp extends StatefulWidget {
   const SecretNumberApp({super.key});
 
   @override

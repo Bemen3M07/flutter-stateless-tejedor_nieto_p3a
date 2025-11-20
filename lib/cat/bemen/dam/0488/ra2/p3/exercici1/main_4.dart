@@ -44,7 +44,7 @@ class ContactScreen extends StatelessWidget {
 
             ClipOval(
               child: Image.asset(
-                'bymax.jpg', 
+                'assets/bymax.jpg', 
                 width: 120,
                 height: 120,
                 fit: BoxFit.cover,
