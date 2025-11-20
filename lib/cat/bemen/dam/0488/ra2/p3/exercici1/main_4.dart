@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MainApp());
+void main() => runApp(const MainApp()); // App de contacto
 // En este ejercicio hemos creado la clase Contact con fullName, email y phone.
 
+// Clase para los datos del contacto
 class Contact {
   final String fullName;
   final String email;
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const contact = Contact(
+    const contact = Contact( // Datos del contacto
       fullName: 'Marta Casserres',
       email: 'marta@example.com',
       phone: '934748474',

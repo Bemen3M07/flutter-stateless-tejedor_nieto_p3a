@@ -1,9 +1,10 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MainApp());
+void main() => runApp(const MainApp()); // App de mensajes con imagen de fondo
 // En este ejercicio hemos aprovechado el código del ejercicio 5 y añadido
 
+// Clase para los mensajes
 class Message {
   final String author;
   final String body;
@@ -16,7 +17,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final names = [
+    final names = [ // Lista de autores posibles
       "Ellison Curry",
       "Briggs Willis",
       "Alexa Murphy",

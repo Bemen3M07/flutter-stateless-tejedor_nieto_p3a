@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyApp()); // App del marcador de equipos
 }
 
 class MyApp extends StatelessWidget {
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CounterApp(),
+      home: CounterApp(), // Pantalla del marcador
     );
   }
 }
@@ -20,8 +20,8 @@ class CounterApp extends StatefulWidget {
 }
 
 class _CounterAppState extends State<CounterApp> {
-  int scoreA = 0;
-  int scoreB = 0;
+  int scoreA = 0; // Puntos equipo A
+  int scoreB = 0; // Puntos equipo B
 
   @override
   Widget build(BuildContext context) {

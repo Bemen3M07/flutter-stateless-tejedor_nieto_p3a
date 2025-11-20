@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MainApp());
+void main() => runApp(const MainApp()); // App de bienvenida
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -9,7 +9,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Bienvenida(),
+      home: Bienvenida(), // Pantalla de bienvenida
     );
   }
 }

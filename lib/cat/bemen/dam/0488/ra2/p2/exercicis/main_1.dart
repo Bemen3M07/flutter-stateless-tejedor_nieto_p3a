@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // Punto de entrada de la app
 }
 
 class MyApp extends StatelessWidget {
@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GoodApp(),
+      home: GoodApp(), // Pantalla principal
     );
   }
 }
 
 class GoodApp extends StatelessWidget {
 
-  final ValueNotifier<String> message = ValueNotifier<String>('Good ?!');
+  final ValueNotifier<String> message = ValueNotifier<String>('Good ?!'); // Variable que cambia el texto
 
   GoodApp({super.key});
 
@@ -27,7 +27,7 @@ class GoodApp extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: ValueListenableBuilder<String>(
+        child: ValueListenableBuilder<String>( // Escucha cambios en message
           valueListenable: message,
           builder: (context, value, _) {
             return Column(
@@ -40,7 +40,7 @@ class GoodApp extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () => message.value = 'Good morning',
+                  onPressed: () => message.value = 'Good morning', // Cambia el texto
                   style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),
                     padding:
@@ -50,7 +50,7 @@ class GoodApp extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 ElevatedButton(
-                  onPressed: () => message.value = 'Good night',
+                  onPressed: () => message.value = 'Good night', // Cambia el texto
                   style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),
                     padding:

@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 ///   ✔ Estat amb llista de productes (nom + quantitat)
 ///
 
+// Widget de lista de compra con iconos y confirmación
 class Ex26ShoppingListIconsDialog extends StatefulWidget {
   const Ex26ShoppingListIconsDialog({super.key});
 
@@ -18,11 +19,11 @@ class Ex26ShoppingListIconsDialog extends StatefulWidget {
 
 class _Ex26ShoppingListIconsDialogState
     extends State<Ex26ShoppingListIconsDialog> {
-  final TextEditingController _nameCtrl = TextEditingController();
-  final TextEditingController _qtyCtrl = TextEditingController();
+  final TextEditingController _nameCtrl = TextEditingController(); // Input nombre
+  final TextEditingController _qtyCtrl = TextEditingController(); // Input cantidad
 
   // Llista de productes [{name: "...", qty: "..."}]
-  final List<Map<String, String>> _items = [];
+  final List<Map<String, String>> _items = []; // Lista de productos
 
   /// Afegir producte
   void _addItem() {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Widget con estado para manejar el input del usuario
 class Ex22SayHello extends StatefulWidget {
   const Ex22SayHello({super.key});
 
@@ -8,7 +9,7 @@ class Ex22SayHello extends StatefulWidget {
 }
 
 class _Ex22SayHelloState extends State<Ex22SayHello> {
-  final TextEditingController _nameCtrl = TextEditingController();
+  final TextEditingController _nameCtrl = TextEditingController(); // Controlador del input
   String _helperText = ''; // mensaje de ayuda/validación opcional
 
   @override
@@ -27,7 +28,7 @@ class _Ex22SayHelloState extends State<Ex22SayHello> {
     }
 
     // Si hay texto válido, mostramos un diálogo de bienvenida
-    showDialog(
+    showDialog( // Abre ventana emergente
       context: context,
       builder: (ctx) => AlertDialog(
         title: const Text('Benvingut / Bienvenido'),
@@ -41,7 +42,6 @@ class _Ex22SayHelloState extends State<Ex22SayHello> {
     // Opcional: limpiar el campo y helper después de mostrar diálogo
     setState(() {
       _helperText = '';
-      // _nameCtrl.clear(); // descomenta si quieres borrar el campo automáticamente
     });
   }
 

@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// Widget de dados con SVG
 class Ex24DiceRoller extends StatefulWidget {
   const Ex24DiceRoller({super.key});
 
@@ -10,9 +11,9 @@ class Ex24DiceRoller extends StatefulWidget {
 }
 
 class _Ex24DiceRollerState extends State<Ex24DiceRoller> {
-  final Random _rng = Random();
-  int _left = 1;
-  int _right = 1;
+  final Random _rng = Random(); // Generador de números aleatorios
+  int _left = 1; // Dado izquierdo
+  int _right = 1; // Dado derecho
 
   void _roll() {
     setState(() {
@@ -20,7 +21,7 @@ class _Ex24DiceRollerState extends State<Ex24DiceRoller> {
       _right = _rng.nextInt(6) + 1; // 1..6
     });
 
-    if (_left == 6 && _right == 6) {
+    if (_left == 6 && _right == 6) { // Jackpot con doble 6
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('JACKPOT!'), duration: Duration(seconds: 2)),
       );

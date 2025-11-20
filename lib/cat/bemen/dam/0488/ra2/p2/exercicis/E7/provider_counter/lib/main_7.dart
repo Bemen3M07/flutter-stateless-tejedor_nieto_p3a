@@ -6,8 +6,8 @@ import 'package:provider_counter/providers/counter_provider.dart';
 
 
 void main() {
-runApp(ChangeNotifierProvider(
-  create: (_) => CounterProvider(),
+runApp(ChangeNotifierProvider( // Provider global para el contador
+  create: (_) => CounterProvider(), // Crea la instancia del contador
   child: const MyApp(), ));
 }
 
@@ -19,11 +19,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Provider Counter',
+      title: 'Provider Counter', // App del contador con provider
       theme: ThemeData(
         primarySwatch: Colors.cyan,
       ),
-      home: const HomeScreen(),
+      home: const HomeScreen(), // Pantalla principal con navegación
     );
   }
 }

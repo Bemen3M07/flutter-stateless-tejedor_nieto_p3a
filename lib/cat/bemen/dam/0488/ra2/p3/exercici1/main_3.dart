@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MainApp());
+void main() => runApp(const MainApp()); // App con imagen y texto
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
+              Image.asset( // Imagen desde assets
                 'assets/bymax.jpg',
                 width: 200,
                 height: 200,

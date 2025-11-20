@@ -6,7 +6,7 @@ import 'pages/stateless_page.dart';
 import 'pages/stateful_page.dart';
 
 void main() {
-  runApp(const Exercici8App());
+  runApp(const Exercici8App()); // App de navegación con tabs
 }
 
 class Exercici8App extends StatelessWidget {

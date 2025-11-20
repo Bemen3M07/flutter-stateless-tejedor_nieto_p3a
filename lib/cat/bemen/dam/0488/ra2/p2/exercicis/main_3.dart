@@ -2,7 +2,7 @@ import 'dart:math' show Random;
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // App del juego de adivinanza
 }
 
 class MyApp extends StatelessWidget {
@@ -26,8 +26,8 @@ class SecretNumberApp extends StatefulWidget {
 
 class _SecretNumberAppState extends State<SecretNumberApp> {
   final TextEditingController _controller = TextEditingController();
-  final int _secretNumber = Random().nextInt(101); 
-  int _intents = 0;
+  final int _secretNumber = Random().nextInt(101); // Número secreto entre 0-100
+  int _intents = 0; // Contador de intentos
   String _message = '';
 
   void _checkNumber() {

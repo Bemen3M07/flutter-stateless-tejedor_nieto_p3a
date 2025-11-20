@@ -1,8 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MainApp());
+void main() => runApp(const MainApp()); // App de mensajes aleatorios
 
+// Clase para los mensajes
 class Message {
   final String author;
   final String body;
@@ -15,7 +16,7 @@ class MainApp extends StatelessWidget {
 //  LISTA DE LOS NOMBRES
   @override
   Widget build(BuildContext context) {
-    final names = [
+    final names = [ // Lista de autores posibles
       "Ellison Curry",
       "Briggs Willis",
       "Alexa Murphy",

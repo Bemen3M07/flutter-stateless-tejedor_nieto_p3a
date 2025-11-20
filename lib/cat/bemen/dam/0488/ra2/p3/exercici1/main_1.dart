@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MainApp()); // App básica con texto
 }
 
 class MainApp extends StatelessWidget {
