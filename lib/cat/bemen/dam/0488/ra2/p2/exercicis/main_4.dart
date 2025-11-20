@@ -29,8 +29,8 @@ class _Ex24DiceRollerState extends State<Ex24DiceRoller> {
 
   @override
   Widget build(BuildContext context) {
-    final leftAsset = 'assets/dice/dice$_left.svg';
-    final rightAsset = 'assets/dice/dice$_right.svg';
+    final leftAsset = 'assets/dice/dice_$_left.svg';
+    final rightAsset = 'assets/dice/dice_$_right.svg';
 
     return Scaffold(
       appBar: AppBar(title: const Text('Ex 2.4 – Dice Roller')),

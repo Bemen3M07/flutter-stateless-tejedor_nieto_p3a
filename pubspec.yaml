@@ -22,5 +22,5 @@ flutter:
 
   assets:
     - assets/dice/
-    - assets/images/tapestry.png
-    - assets/dicerollericon.jpg
+    - assets/images/
+    - assets/
