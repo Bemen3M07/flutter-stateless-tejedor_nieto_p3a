@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-typedef WidgetFactory = Widget Function();
+typedef WidgetFactory = Widget Function(); // Tipo para crear widgets
 
+// Página que muestra los ejercicios P2 (stateful) con tabs
 class StatefulPage extends StatefulWidget {
-  final List<WidgetFactory> widgets;
-  final List<String>? labels;
+  final List<WidgetFactory> widgets; // Lista de ejercicios
+  final List<String>? labels; // Nombres opcionales para los tabs
 
   const StatefulPage({super.key, required this.widgets, this.labels});
 
@@ -14,12 +15,12 @@ class StatefulPage extends StatefulWidget {
 
 class _StatefulPageState extends State<StatefulPage>
     with SingleTickerProviderStateMixin {
-  late TabController controller;
+  late TabController controller; // Controlador de las pestañas
 
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: widget.widgets.length, vsync: this);
+    controller = TabController(length: widget.widgets.length, vsync: this); // Crea tabs según número de ejercicios
   }
 
   @override
@@ -33,15 +34,15 @@ class _StatefulPageState extends State<StatefulPage>
     return Column(
       children: [
         Material(
-          color: Colors.green,
+          color: Colors.green, // Color verde para P2
           child: TabBar(
             controller: controller,
-            isScrollable: true,
+            isScrollable: true, // Permite scroll si hay muchos tabs
             tabs: List.generate(
               widget.widgets.length,
               (i) => Tab(text: widget.labels != null && i < widget.labels!.length
                   ? widget.labels![i]
-                  : "P2 - ${i + 1}"),
+                  : "P2 - ${i + 1}"), // Usa etiqueta personalizada o numeración
             ),
           ),
         ),
@@ -52,9 +53,9 @@ class _StatefulPageState extends State<StatefulPage>
               (factory) {
                 return Center(
                   child: ElevatedButton(
-                    child: const Text("Obrir exercici"),
+                    child: const Text("Obrir exercici"), // Texto del botón
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.push( // Abre el ejercicio en nueva pantalla
                         context,
                         MaterialPageRoute(builder: (_) => factory()),
                       );
